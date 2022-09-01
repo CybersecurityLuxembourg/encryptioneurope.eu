@@ -1,6 +1,6 @@
 
 .rbc-event {
-	background-color: #009fe3 !important;
+	background-color: #9608A7 !important;
 }
 
 .rbc-time-slot {
@@ -28,7 +28,7 @@
 	margin-bottom:  25px;
 	padding: 25px;
 	background-color: rgba(188, 235, 255, 0.2) !important;
-	color: #009fe3 !important;
+	color: #9608A7 !important;
 	text-align: center;
 	cursor: pointer;
   	justify-content: center;
@@ -76,5 +76,5 @@
 }
 
 .PageCalendar-blue-block a:hover {
-  	color: #009fe3 !important;
+  	color: #9608A7 !important;
 }

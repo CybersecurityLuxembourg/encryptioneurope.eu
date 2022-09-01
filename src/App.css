@@ -113,7 +113,7 @@ button {
 	text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
 	text-align:center;
 	transition: all 0.2s;
-	background-color: #009fe3;
+	background-color: #9608A7;
 	opacity: .5;
 }
 
@@ -189,13 +189,13 @@ input::placeholder, textarea::placeholder, select::placeholder {
 }
 
 input:focus, textarea:focus, select:focus {
-	border: 1px solid #009fe3;
+	border: 1px solid #9608A7;
 }
 
 /* NOTIFICATION */
 
 .notification-info {
-  background-color: #009fe3 !important;
+  background-color: #9608A7 !important;
 }
 
 .notification-success {

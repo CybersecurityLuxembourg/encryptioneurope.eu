@@ -307,7 +307,7 @@ export default class PageSearch extends React.Component {
 								buildElement={(a) => (
 									<div className="col-md-6">
 										<Company
-											info={a}
+											info={a[0]}
 										/>
 									</div>
 								)}

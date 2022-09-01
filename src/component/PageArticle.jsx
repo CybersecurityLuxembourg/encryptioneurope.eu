@@ -7,7 +7,6 @@ import Breadcrumb from "react-bootstrap/Breadcrumb";
 import { Link } from "react-router-dom";
 import { getRequest } from "../utils/request.jsx";
 import { getApiURL } from "../utils/env.jsx";
-import { dictToURI } from "../utils/url.jsx";
 import Loading from "./box/Loading.jsx";
 import Chip from "./form/Chip.jsx";
 import { getContentFromBlock } from "../utils/article.jsx";

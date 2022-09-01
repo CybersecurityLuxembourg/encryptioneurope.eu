@@ -94,7 +94,6 @@ export default class PageEvent extends React.Component {
 										<Chip
 											key={t.name}
 											label={t.name}
-											url={"/search?taxonomy_value=" + t.id}
 										/>
 									))}
 								</div>

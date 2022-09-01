@@ -28,16 +28,13 @@ export default class Footer extends React.Component {
 									</div>
 									<br/>
 									<div>
-										<Link to="/ecosystem">Ecosystem</Link>
+										<Link to="/members">Members</Link>
 									</div>
 									<div>
 										<Link to="/news">News</Link>
 									</div>
 									<div>
 										<Link to="/events">Events</Link>
-									</div>
-									<div>
-										<Link to="/jobs">Jobs</Link>
 									</div>
 									<br/>
 									<div>

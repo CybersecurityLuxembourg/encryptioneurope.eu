@@ -23,10 +23,7 @@ export default class PageArticle extends React.Component {
 		this.state = {
 			article: null,
 			articleCompanies: null,
-			relatedArticles: null,
-			relatedArticleCompanies: null,
 			articleLoading: false,
-			relatedArticleLoading: false,
 		};
 	}
 
@@ -38,10 +35,7 @@ export default class PageArticle extends React.Component {
 		this.setState({
 			article: null,
 			articleCompanies: null,
-			relatedArticles: null,
-			relatedArticleCompanies: null,
 			articleLoading: false,
-			relatedArticleLoading: false,
 		});
 
 		getRequest.call(this, "public/get_public_article_content/" + this.props.match.params.handle, (data) => {
@@ -49,42 +43,6 @@ export default class PageArticle extends React.Component {
 				article: data,
 				articleLoading: false,
 			});
-
-			if (data.type === "NEWS") {
-				getRequest.call(this, "public/get_public_related_articles/" + data.id + "?include_tags=true", (data2) => {
-					this.setState({
-						relatedArticles: data2,
-						relatedArticleLoading: false,
-					}, () => {
-						const params2 = {
-							ids: Array.prototype.concat.apply(
-								[],
-								data2
-									.filter((i) => i.entity_tags)
-									.map((i) => i.entity_tags),
-							),
-						};
-
-						if (params2.ids.length > 0) {
-							getRequest.call(this, "public/get_public_entities?" + dictToURI(params2), (data3) => {
-								this.setState({
-									relatedArticleCompanies: data3,
-								});
-							}, (response) => {
-								nm.warning(response.statusText);
-							}, (error) => {
-								nm.error(error.message);
-							});
-						}
-					});
-				}, (response) => {
-					this.setState({ loading: false });
-					nm.warning(response.statusText);
-				}, (error) => {
-					this.setState({ loading: false });
-					nm.error(error.message);
-				});
-			}
 		}, (response) => {
 			this.setState({ loading: false });
 			nm.warning(response.statusText);

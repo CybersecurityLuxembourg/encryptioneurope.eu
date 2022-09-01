@@ -128,7 +128,7 @@ export default class PageCompany extends React.Component {
 									<Link to="/">{getSettingValue(this.props.settings, "PROJECT_NAME")}</Link>
 								</Breadcrumb.Item>
 							}
-							<Breadcrumb.Item><Link to="/ecosystem">Ecosystem</Link></Breadcrumb.Item>
+							<Breadcrumb.Item><Link to="/members">Members</Link></Breadcrumb.Item>
 							{this.state.company !== null && !this.state.loading
 								? <Breadcrumb.Item>
 									<a href={"/company/" + this.state.company.id}>{this.state.company.name}</a>

@@ -6,7 +6,6 @@
 
 .Loading-logo {
     width: 50px;
-    height: 50px;
     animation: rotate 3s infinite;
     -webkit-animation: rotate 3s infinite;
     -moz-animation: rotate 3s infinite;
@@ -18,7 +17,6 @@
 
 .Loading-logo img {
     width: 50px;
-    height: 50px;
 }
 
 @-webkit-keyframes rotate {

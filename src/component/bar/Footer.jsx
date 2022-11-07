@@ -56,9 +56,9 @@ export default class Footer extends React.Component {
 							<div className="Footer-title">CONTACT</div>
 							<br/>
 							<div>Encryption Europe</div>
-							<div>co/ SECURITYMADEIN.LU</div>
-							<div>16, boulevard d&apos;Avranches</div>
-							<div>L-1160 Luxembourg</div>
+							<div>co/ Luxembourg House of Cybersecurity</div>
+							<div>122, rue Adolphe Fischer</div>
+							<div>L-1521 Luxembourg</div>
 							<br/><br/>
 							<div>contact@encryptioneurope.eu</div>
 						</div>

@@ -7,6 +7,7 @@ import Menu from "./bar/Menu.jsx";
 import Footer from "./bar/Footer.jsx";
 import PageHome from "./PageHome.jsx";
 import PageMember from "./PageMember.jsx";
+import PageFriend from "./PageFriend.jsx";
 import PageNews from "./PageNews.jsx";
 import PageEvents from "./PageEvents.jsx";
 import PageArticle from "./PageArticle.jsx";
@@ -14,6 +15,7 @@ import PageEvent from "./PageEvent.jsx";
 import PageJob from "./PageJob.jsx";
 import PageCompany from "./PageCompany.jsx";
 import PageAbout from "./PageAbout.jsx";
+import PageJoinUs from "./PageJoinUs.jsx";
 import PageSearch from "./PageSearch.jsx";
 
 export default class InsideApp extends React.Component {
@@ -63,6 +65,9 @@ export default class InsideApp extends React.Component {
 						<Route path="/members" render={(props) => <PageMember
 							{...props} settings={this.state.settings}
 						/>}/>
+						<Route path="/friends" render={(props) => <PageFriend
+							{...props} settings={this.state.settings}
+						/>}/>
 						<Route path="/news" render={(props) => <PageNews
 							{...props} settings={this.state.settings}
 						/>}/>
@@ -73,6 +78,9 @@ export default class InsideApp extends React.Component {
 							{...props} settings={this.state.settings}
 						/>}/>
 						<Route path="/about" render={(props) => <PageAbout
+							{...props} settings={this.state.settings}
+						/>}/>
+						<Route path="/join" render={(props) => <PageJoinUs
 							{...props} settings={this.state.settings}
 						/>}/>
 

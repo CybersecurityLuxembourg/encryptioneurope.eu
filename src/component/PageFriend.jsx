@@ -1,5 +1,5 @@
 import React from "react";
-import "./PageMember.css";
+import "./PageFriend.css";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import { Link } from "react-router-dom";
 import { NotificationManager as nm } from "react-notifications";
@@ -10,12 +10,12 @@ import Company from "./item/Company.jsx";
 import { dictToURI } from "../utils/url.jsx";
 import { getSettingValue } from "../utils/setting.jsx";
 
-export default class PageMember extends React.Component {
+export default class PageFriend extends React.Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			members: null,
+			friends: null,
 			taxonomy: null,
 		};
 	}
@@ -32,7 +32,7 @@ export default class PageMember extends React.Component {
 				this.setState({
 					taxonomy: data,
 				}, () => {
-					this.getPublicMembers();
+					this.getPublicFriends();
 				});
 			}, (response) => {
 				nm.warning(response.statusText);
@@ -42,12 +42,12 @@ export default class PageMember extends React.Component {
 		});
 	}
 
-	getPublicMembers() {
+	getPublicFriends() {
 		this.setState({
-			members: null,
+			friends: null,
 		}, () => {
 			const values = this.state.taxonomy.values
-				.filter((v) => v.category === "ECOSYSTEM ROLE" && v.name === "MEMBER");
+				.filter((v) => v.category === "ECOSYSTEM ROLE" && v.name === "FRIEND");
 
 			if (values.length > 0) {
 				const params = {
@@ -56,7 +56,7 @@ export default class PageMember extends React.Component {
 
 				getRequest.call(this, "public/get_public_entities?" + dictToURI(params), (data) => {
 					this.setState({
-						members: data,
+						friends: data,
 					});
 				}, (response) => {
 					nm.warning(response.statusText);
@@ -65,7 +65,7 @@ export default class PageMember extends React.Component {
 				});
 			} else {
 				this.setState({
-					members: [],
+					friends: [],
 				});
 			}
 		});
@@ -73,7 +73,7 @@ export default class PageMember extends React.Component {
 
 	render() {
 		return (
-			<div className={"PageMember page max-sized-page"}>
+			<div className={"PageFriend page max-sized-page"}>
 				<div className="row">
 					<div className="col-md-12">
 						<Breadcrumb>
@@ -82,14 +82,14 @@ export default class PageMember extends React.Component {
 									<Link to="/">{getSettingValue(this.props.settings, "PROJECT_NAME")}</Link>
 								</Breadcrumb.Item>
 							}
-							<Breadcrumb.Item><Link to="/members">Members</Link></Breadcrumb.Item>
+							<Breadcrumb.Item><Link to="/friends">Friends</Link></Breadcrumb.Item>
 						</Breadcrumb>
 					</div>
 				</div>
 
 				<div className="row">
 					<div className="col-md-12">
-						<h1>Members of Encryption Europe</h1>
+						<h1>Friends of Encryption Europe</h1>
 					</div>
 				</div>
 
@@ -102,8 +102,8 @@ export default class PageMember extends React.Component {
 				</div>
 
 				<div className="row row-spaced">
-					{this.state.members && this.state.members.length > 0
-						&& this.state.members.map((m) => (
+					{this.state.friends && this.state.friends.length > 0
+						&& this.state.friends.map((m) => (
 							<div
 								className="col-md-6"
 								key={m.id}>
@@ -114,16 +114,16 @@ export default class PageMember extends React.Component {
 						))
 					}
 
-					{this.state.members && this.state.members.length === 0
+					{this.state.friends && this.state.friends.length === 0
 						&& <div className="col-md-12">
 							<Message
-								text={"No member found"}
+								text={"No friend found"}
 								height={300}
 							/>
 						</div>
 					}
 
-					{!this.state.members
+					{!this.state.friends
 						&& <div className="col-md-12">
 							<Loading
 								height={300}

@@ -40,6 +40,12 @@ export default class Menu extends React.Component {
 				</Link>
 			</Nav.Link>
 			<Nav.Link>
+				<Link to="/friends">
+					<div className="Menu-title">Friends</div>
+					<div className="Menu-description">Who supports us?</div>
+				</Link>
+			</Nav.Link>
+			<Nav.Link>
 				<Link to="/news">
 					<div className="Menu-title">News</div>
 					<div className="Menu-description">What&apos;s up?</div>
@@ -81,6 +87,12 @@ export default class Menu extends React.Component {
 								<Link to="/about">
 									<div className="Menu-title">About</div>
 									<div className="Menu-description">What about us?</div>
+								</Link>
+							</Nav.Link>
+							<Nav.Link eventKey="join">
+								<Link to="/join">
+									<div className="Menu-title">Join us</div>
+									<div className="Menu-description">Learn how</div>
 								</Link>
 							</Nav.Link>
 							<a

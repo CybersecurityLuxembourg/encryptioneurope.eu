@@ -31,9 +31,10 @@ export default class PageAbout extends React.Component {
 					</div>
 				</div>
 
-				<div className="row">
+				<div className="row row-spaced">
 					<div className="col-md-12">
 						<h1>ENCRYPTION EUROPE</h1>
+
 						<h2>FORMATION AGREEMENT</h2>
 
 						<h3>Article 1. ENCRYPTION EUROPE</h3>

@@ -31,6 +31,9 @@ export default class Footer extends React.Component {
 										<Link to="/members">Members</Link>
 									</div>
 									<div>
+										<Link to="/friends">Friends</Link>
+									</div>
+									<div>
 										<Link to="/news">News</Link>
 									</div>
 									<div>
@@ -39,6 +42,9 @@ export default class Footer extends React.Component {
 									<br/>
 									<div>
 										<Link to="/about">About</Link>
+									</div>
+									<div>
+										<Link to="/join">Join us</Link>
 									</div>
 									<div>
 										<a href={getCommunityAppURL()}>
